@@ -13,6 +13,12 @@
    color: inherit;
  }
 
+ canvas {
+        width: 100% !important;
+        max-width: 400;
+        height: auto !important;
+    }
+
  /* Everything but the jumbotron gets side spacing for mobile first views */
  .header,
  .marketing,
