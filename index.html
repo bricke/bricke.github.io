@@ -1,7 +1,123 @@
+
 <!DOCTYPE html>
-<html>
-<body>
-<h1>PAGE UNDER CONSTRUCTION</h1>
-<p>If you need me, check FB or LinkedIn</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="icons/favicon.ico">
+
+    <title>Matteo Brichese</title>
+
+    <!-- Bootstrap core CSS and Font Awesome-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" >
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="http://facebook.com/matteo.brichese"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            <li role="presentation"><a href="http://www.linkedin.com/in/matteobrichese/en"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+            <li role="presentation"><a href="http://github.com/bricke"><i class="fa fa-github-square fa-2x"></i></a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted"><a href="http://matteobrichese.com">Matteo Brichese</a></h3>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-5 col-md-5">
+          <div class="thumbnail">
+            <img src="images/me.jpg" alt="ME">
+          </div>
+        </div>
+        <div class="col-xs-5 col-md-5">
+          <canvas id="skills" width="350" height="300"></canvas>
+        </div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-xs-6 col-md-6">
+          <h4>Work</h4>
+          <p>Software Developer</p>
+
+          <h4>Skills</h4>
+          <p>Qt/C++, Sinatra/Ruby, Linux OS, C, Android/Java</p>
+
+          <!--<h4>Projects</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>-->
+        </div>
+
+        <div class="col-xs-6 col-md-6">
+          <h4>Education</h4>
+          <p>Bachelor Degree in CS @ University of Venice (ITA)</p>
+
+          <h4>Interests</h4>
+          <p>Outdoor, Biking, Photography, Opensource</p>
+
+          <!--<h4>Stuff</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>-->
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Matteo Brichese 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script>
+    $(document).ready(function()
+    {
+      var data = {
+          labels: ["Qt/C++", "QML", "C", "Linux OS", "Sinatra", "Android", "Ruby", "Bash Script", "Phyton", "Arduino"],
+          datasets: [
+              /*{
+                  label: "Skills",
+                  fillColor: "rgba(220,220,220,0.2)",
+                  strokeColor: "rgba(220,220,220,1)",
+                  pointColor: "rgba(220,220,220,1)",
+                  pointStrokeColor: "#fff",
+                  pointHighlightFill: "#fff",
+                  pointHighlightStroke: "rgba(220,220,220,1)",
+                  data: [0, 0, 0, 0, 0, 0, 0, 60, 30, 95, 80]
+              },*/
+              {
+                  label: "Skills",
+                  fillColor: "rgba(151,187,205,0.2)",
+                  strokeColor: "rgba(151,187,205,1)",
+                  pointColor: "rgba(151,187,205,1)",
+                  pointStrokeColor: "#fff",
+                  pointHighlightFill: "#fff",
+                  pointHighlightStroke: "rgba(151,187,205,1)",
+                  data: [80, 60, 60, 70, 70, 65, 50, 50, 10, 40]
+              }
+          ]
+      };
+
+      var buyers = document.getElementById('skills').getContext('2d');
+      new Chart(buyers).Radar(data, Chart.defaults.Radar);
+    });
+    </script>
+
+  </body>
 </html>
