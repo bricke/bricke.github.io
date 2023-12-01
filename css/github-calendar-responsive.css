@@ -192,29 +192,13 @@ text.ContributionCalendar-label {
     fill: #ccc;
     font-size: 11px;
 }
-.GitHub {
-    width:100%;
-  display: flex;
-  justify-content: center;
-}
+
 .sr-only {
     display: none;
 }
-
-td:first-child {
-    display: none;
-}
-
-div.js-calendar-graph div:last-child {
-    display: none;
-}
-
-table.ContributionCalendar-grid thead {
-    display: none;
-}
-
 td.ContributionCalendar-day {
-    border-radius: 3px;
+    min-width: 1em;
+    min-height: 1em;
 }
 
 td.ContributionCalendar-day[data-level='0'] {
@@ -235,4 +219,8 @@ td.ContributionCalendar-day[data-level='3'] {
 
 td.ContributionCalendar-day[data-level='4'] {
     background-color: var(--color-calendar-graph-day-L4-bg);
+}
+
+td span {
+  position: initial !important;
 }
